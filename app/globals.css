@@ -1,0 +1,83 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: #0a0a0a; color: #fff; }
+body { font-size: 12px; line-height: 1.6; }
+h1 { font-size: 24px; margin: 0 0 8px; }
+h2 { font-size: 14px; margin: 0 0 8px; word-break: break-word; }
+.muted { color: #9a9a9a; font-size: 10px; margin: 0 0 16px; }
+
+.center { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 16px; }
+
+.card {
+  background: #1a1a1a;
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* pixel border */
+  box-shadow:
+    -4px 0 0 0 #6b6b6b, 4px 0 0 0 #6b6b6b,
+    0 -4px 0 0 #6b6b6b, 0 4px 0 0 #6b6b6b;
+  margin: 4px;
+}
+
+label { font-size: 11px; margin-top: 8px; }
+
+input, textarea {
+  font-family: inherit;
+  font-size: 11px;
+  color: #fff;
+  background: #222;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  outline: none;
+  box-shadow:
+    -4px 0 0 0 #6b6b6b, 4px 0 0 0 #6b6b6b,
+    0 -4px 0 0 #6b6b6b, 0 4px 0 0 #6b6b6b;
+  margin: 4px 0;
+}
+input:focus, textarea:focus {
+  box-shadow:
+    -4px 0 0 0 #fff, 4px 0 0 0 #fff,
+    0 -4px 0 0 #fff, 0 4px 0 0 #fff;
+}
+input::placeholder { color: #777; }
+input.invalid {
+  box-shadow:
+    -4px 0 0 0 #ff5555, 4px 0 0 0 #ff5555,
+    0 -4px 0 0 #ff5555, 0 4px 0 0 #ff5555;
+}
+textarea { resize: vertical; }
+
+.btn {
+  font-family: inherit;
+  font-size: 11px;
+  color: #fff;
+  background: #1a1a1a;
+  border: none;
+  padding: 12px 16px;
+  margin: 12px 4px 4px;
+  cursor: pointer;
+  box-shadow:
+    -4px 0 0 0 #6b6b6b, 4px 0 0 0 #6b6b6b,
+    0 -4px 0 0 #6b6b6b, 0 4px 0 0 #6b6b6b;
+}
+.btn:hover { background: #333; }
+.btn:active { transform: translateY(2px); }
+.btn.primary { background: #e5e5e5; color: #111; }
+.btn.primary:hover { background: #fff; }
+.btn.small { margin: 8px 4px 0; padding: 8px 12px; font-size: 10px; align-self: flex-start; }
+
+.error { color: #ff6b6b; font-size: 10px; margin: 4px 0 0; }
+.form-error { text-align: center; margin-top: 12px; }
+
+.notes-wrap { max-width: 800px; margin: 0 auto; padding: 32px 16px; display: flex; flex-direction: column; gap: 32px; }
+.notes-wrap .card { max-width: 100%; }
+.topbar { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.topbar .btn { margin-top: 4px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px; }
+.note p { margin: 0; font-size: 11px; white-space: pre-wrap; word-break: break-word; }
+
+.success { color: #6bff8a; font-size: 11px; margin: 8px 0; word-break: break-word; }
